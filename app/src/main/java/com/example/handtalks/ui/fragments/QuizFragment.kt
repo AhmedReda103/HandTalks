@@ -84,11 +84,32 @@ class QuizFragment : Fragment(R.layout.quiz_fragment) {
     private fun subscribeToLiveData() {
 
         quizViewModel.charModelListenerQuiz.observe(viewLifecycleOwner) { userChar ->
-            compareTwoCharacters(userChar)
+            if(modelPath == ASL_PATH){
+                compareTwoCharactersASL(userChar)
+            }else{
+                compareTwoCharactersARSL(userChar)
+            }
         }
     }
 
-    private fun compareTwoCharacters(userChar: String) {
+    private fun compareTwoCharactersASL(userChar: String?) {
+        if (userChar == englishAlphabets[randomIndex] ) {
+
+            Log.d(TAG, "ModelCharacters:${userChar} ")
+            Log.d(TAG, "UserCharacters:${englishAlphabets[randomIndex]} ")
+
+            binding.randChar.visibility = View.INVISIBLE
+            val animationToLeft = AnimationUtils.loadAnimation(requireContext(), R.anim.to_left)
+            binding.randChar.startAnimation(animationToLeft)
+            binding.randChar.visibility = View.INVISIBLE
+            //binding.checkImage.visibility = View.VISIBLE
+            setTextToRandomElement()
+
+
+        }
+    }
+
+    private fun compareTwoCharactersARSL(userChar: String) {
         val ranText = binding.randChar.text.toString()
         if (userChar ==ARSLOrderedChars[randomIndex] ) {
 

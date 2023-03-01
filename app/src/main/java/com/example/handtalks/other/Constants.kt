@@ -39,7 +39,7 @@ object Constants {
     val ARSLOrderedChars = arrayOf(
         "aleff",
         "baa",
-        "taa",
+        "ta",
         "tha",
         "jem",
         "haa",
@@ -52,7 +52,7 @@ object Constants {
         "sheen",
         "saad",
         "daad",
-        "ta",
+        "taa",
         "thah",
         "ain",
         "ghain",
