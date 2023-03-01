@@ -36,6 +36,38 @@ object Constants {
         return list
     }
 
+    val ARSLOrderedChars = arrayOf(
+        "aleff",
+        "baa",
+        "taa",
+        "tha",
+        "jem",
+        "haa",
+        "khaa",
+        "dal",
+        "thal",
+        "ra",
+        "zay",
+        "seen",
+        "sheen",
+        "saad",
+        "daad",
+        "ta",
+        "thah",
+        "ain",
+        "ghain",
+        "fa",
+        "qaaf",
+        "kaaf",
+        "laam",
+        "meem",
+        "nun",
+        "ha",
+        "waw",
+        "ya",
+
+    )
+
     val arabicAlphabets = arrayListOf<String>(
         "أ",
         "ب",
@@ -66,6 +98,7 @@ object Constants {
         "و",
         "ي"
     )
+
     val englishAlphabets = arrayListOf<String>(
         "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N",
         "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"
@@ -132,7 +165,7 @@ object Constants {
         DictionaryItem("ي", R.drawable.ya),
 
 
-    )
+        )
 
 
 }

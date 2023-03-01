@@ -6,6 +6,7 @@ import android.graphics.Matrix
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.Toast
@@ -20,6 +21,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.handtalks.R
 import com.example.handtalks.databinding.QuizFragmentBinding
+import com.example.handtalks.other.Constants.ARSLOrderedChars
 import com.example.handtalks.other.Constants.ARSL_PATH
 import com.example.handtalks.other.Constants.ASL_PATH
 import com.example.handtalks.other.Constants.arabicAlphabets
@@ -46,8 +48,9 @@ class QuizFragment : Fragment(R.layout.quiz_fragment) {
 
     @Inject
     lateinit var classes: Array<String>
+    private var randomIndex: Int = 0
 
-
+    private val TAG = "QuizFragment"
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = QuizFragmentBinding.bind(view)
@@ -61,14 +64,13 @@ class QuizFragment : Fragment(R.layout.quiz_fragment) {
     }
 
     private fun setTextToRandomElement() {
-        binding.checkImage.visibility = View.INVISIBLE
         binding.randChar.visibility = View.VISIBLE
-        var randomIndex: Int
         var randomElement: String
         if (modelPath == ARSL_PATH) {
             randomIndex = Random.nextInt(arabicAlphabets.size);
             randomElement = arabicAlphabets[randomIndex]
             binding.randChar.text = randomElement
+
         } else if (modelPath == ASL_PATH) {
             randomIndex = Random.nextInt(englishAlphabets.size);
             randomElement = englishAlphabets[randomIndex]
@@ -88,11 +90,14 @@ class QuizFragment : Fragment(R.layout.quiz_fragment) {
 
     private fun compareTwoCharacters(userChar: String) {
         val ranText = binding.randChar.text.toString()
-        if (userChar == ranText) {
+        if (userChar ==ARSLOrderedChars[randomIndex] ) {
+
+            Log.d(TAG, "ModelCharacters:${userChar} ")
+            Log.d(TAG, "UserCharacters:${ARSLOrderedChars[randomIndex]} ")
+
             binding.randChar.visibility = View.INVISIBLE
             val animationToLeft = AnimationUtils.loadAnimation(requireContext(), R.anim.to_left)
             binding.randChar.startAnimation(animationToLeft)
-
             binding.randChar.visibility = View.INVISIBLE
             //binding.checkImage.visibility = View.VISIBLE
             setTextToRandomElement()

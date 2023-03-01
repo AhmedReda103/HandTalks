@@ -52,11 +52,11 @@ object PracticeItemsRepo {
 
 
     private val firstItemArabicCharacter =
-        arrayListOf<String>("aleff", "baa", "ta", "tha", "jem", "ha", "khaa", "dal" , "thal")
+        arrayListOf<String>("aleff", "baa", "ta", "tha", "jem", "haa", "khaa", "dal" , "thal")
     private val secondItemArabicCharacter =
         arrayListOf<String>("ra", "zay", "seen", "sheen", "saad", "daad", "taa", "thah" , "ain" , "ghain")
     private val thirdItemArabicCharacter =
-        arrayListOf<String>("fa", "qaaf", "kaaf", "laam", "meem", "nun", "haa", "waw", "ya")
+        arrayListOf<String>("fa", "qaaf", "kaaf", "laam", "meem", "nun", "ha", "waw", "ya")
 
 
     private val firstItemArabicImages = arrayListOf<Int>(

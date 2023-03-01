@@ -40,7 +40,7 @@ val aslChars = arrayOf(
 )
 
 val ArslChar = arrayOf(
-    "ain", "aleff", "baa", "daad", "dal", "fa", "Qaaf", "ghain",
+    "ain", "aleff", "baa", "daad", "dal", "fa", "qaaf", "ghain",
     "ha", "haa", "jem", "kaaf", "khaa", "laam", "meem", "nun", "ra", "saad", "seen", "sheen",
     "ta", "taa", "tha", "thah", "thal", "waw", "ya", "zay"
 )

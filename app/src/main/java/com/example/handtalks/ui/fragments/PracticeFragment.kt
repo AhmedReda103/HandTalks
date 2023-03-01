@@ -184,9 +184,9 @@ class PracticeFragment : Fragment(R.layout.pactice_fragment) {
         requestCameraPermissionIfMissing { granted ->
             if (granted)
                 startCamera()
-            else
-                Toast.makeText(requireContext(), "please allow the permission", Toast.LENGTH_SHORT)
-                    .show()
+//            else
+//                Toast.makeText(requireContext(), "please allow the permission", Toast.LENGTH_SHORT)
+//                    .show()
         }
     }
 

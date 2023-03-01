@@ -25,7 +25,7 @@ class LessonsFragment : Fragment(R.layout.lessons_fragment), CardsInteractionCli
         super.onViewCreated(view, savedInstanceState)
         binding = LessonsFragmentBinding.bind(view)
 
-        Toast.makeText(requireContext(), modelPath, Toast.LENGTH_LONG).show()
+       // Toast.makeText(requireContext(), modelPath, Toast.LENGTH_LONG).show()
 
         setupRecyclerView(modelPath)
     }
