@@ -1,0 +1,16 @@
+    fun loadModel() {
+        val inputShape = tfliteInterpreter.getInputTensor(0).shape()
+        val outputShape = tfliteInterpreter.getOutputTensor(0).shape()
+        val batchSize = inputShape[0]
+        val numClasses = outputShape[1]
+        Timber.d("Batch size: $batchSize")
+        Timber.d("Number of classes: $numClasses")
+    }
+///////////////////////////////////////////////////////////
+fun bitmapToString(bitmap: Bitmap): String {
+    val baos = ByteArrayOutputStream()
+    bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos)
+    val imageBytes = baos.toByteArray()
+    return Base64.encodeToString(imageBytes, Base64.DEFAULT)
+}
+///////////////////////////////////////////////////////////

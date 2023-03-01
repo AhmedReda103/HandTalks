@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/lessonsFragment"
+        android:icon="@drawable/lessons"
+        android:title="Lessons" />
+
+    <item
+        android:id="@+id/practiceFragment"
+        android:icon="@drawable/egypt"
+        android:title="Practice" />
+
+    <item
+        android:id="@+id/dictFragment"
+        android:icon="@drawable/dictionary"
+        android:title="Dictionary" />
+
+    <item
+        android:id="@+id/quizFragment"
+        android:icon="@drawable/quiz"
+        android:title="Quiz" />
+
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/settings"
+        android:title="Settings" />
+
+</menu>

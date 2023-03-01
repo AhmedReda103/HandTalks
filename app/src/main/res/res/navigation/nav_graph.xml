@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/appIntro">
+
+    <fragment
+        android:id="@+id/appIntro"
+        android:name="com.example.handtalks.ui.fragments.AppIntro"
+        android:label="AppIntro" >
+        <action
+            android:id="@+id/action_appIntro_to_chooseLangFragment"
+            app:destination="@id/chooseLangFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseLangFragment"
+        android:name="com.example.handtalks.ui.fragments.ChooseLangFragment"
+        android:label="ChooseLangFragment" >
+        <action
+            android:id="@+id/action_chooseLangFragment_to_lessonsFragment"
+            app:destination="@id/lessonsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.handtalks.ui.fragments.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/lessonsFragment"
+        android:name="com.example.handtalks.ui.fragments.LessonsFragment"
+        android:label="LessonsFragment" />
+    <fragment
+        android:id="@+id/dictFragment"
+        android:name="com.example.handtalks.ui.fragments.DictFragment"
+        android:label="DictFragment" />
+    <fragment
+        android:id="@+id/practiceFragment"
+        android:name="com.example.handtalks.ui.fragments.PracticeFragment"
+        android:label="PracticeFragment" />
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.handtalks.ui.fragments.QuizFragment"
+        android:label="QuizFragment" />
+</navigation>
