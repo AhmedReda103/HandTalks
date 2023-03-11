@@ -4,111 +4,75 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.ImageView
+
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.example.handtalks.R
-import com.example.handtalks.databinding.SettingsFragmentBinding
-import com.example.handtalks.other.languageCodes
-import com.example.handtalks.other.languageModels
-import com.example.handtalks.other.modelPath
-import com.example.handtalks.other.selectedModel
+import com.example.handtalks.databinding.SettingsFragment2Binding
+import com.example.handtalks.other.*
+import com.example.handtalks.ui.viewmodels.SettingsViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class SettingsFragment : Fragment(R.layout.settings_fragment) {
-    private lateinit var binding: SettingsFragmentBinding
+class SettingsFragment : Fragment(R.layout.settings_fragment2) {
+    private lateinit var binding: SettingsFragment2Binding
     var selectedLanguageCode: String? = null
 
+    private val viewModel: SettingsViewModel by viewModels()
+
     @Inject
-    lateinit var classes :Array<String>
+    lateinit var classes: Array<String>
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = SettingsFragmentBinding.inflate(inflater , container , false)
+    ): View {
+        binding = SettingsFragment2Binding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-            setUpSpinnerAdapter()
-            spinnerSelectedItem()
-            handleSelectBtn()
+        checkLanguage()
 
-    }
+        binding.apply {
+            selectLangRg.setOnCheckedChangeListener { group, checkedId ->
+                when (checkedId) {
+                    R.id.radio_asl -> {
+                        viewModel.setLanguage(Constants.ASL)
+                        modelPath = languageModels[Constants.ASL].toString()
 
+                    }
+                    R.id.radio_arsl -> {
+                        viewModel.setLanguage(Constants.ARSL)
+                        modelPath = languageModels[Constants.ARSL].toString()
 
-
-    private fun setUpSpinnerAdapter() {
-        val adapter = object : ArrayAdapter<String>(
-            requireContext(),
-            R.layout.spinner_item,
-            R.id.language_name,
-            languageCodes
-        ) {
-            override fun getDropDownView(
-                position: Int,
-                convertView: View?,
-                parent: ViewGroup
-            ): View {
-                val view = super.getDropDownView(position, convertView, parent)
-                val icon: ImageView = view.findViewById(R.id.language_icon)
-                if (position == 0) {
-                    icon.setImageResource(R.drawable.egypt)
-                } else if (position == 1) {
-                    icon.setImageResource(R.drawable.usa)
+                    }
                 }
-                return view
-            }
 
-            override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-                val view = super.getView(position, convertView, parent)
-                val icon: ImageView = view.findViewById(R.id.language_icon)
-                if (position == 0) {
-                    icon.setImageResource(R.drawable.egypt)
-                } else if (position == 1) {
-                    icon.setImageResource(R.drawable.usa)
-                }
-                return view
+
             }
         }
-        binding.languageSpinner.adapter = adapter
+
     }
 
-    private fun spinnerSelectedItem() {
-        binding.languageSpinner.onItemSelectedListener =
-            object : AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(
-                    parent: AdapterView<*>?,
-                    view: View?,
-                    position: Int,
-                    id: Long
-                ) {
-                    selectedLanguageCode = languageCodes[position]
-                }
-
-                override fun onNothingSelected(parent: AdapterView<*>?) {
-                    selectedLanguageCode = languageCodes[parent?.adapter?.getItem(0) as Int]
+    private fun checkLanguage() {
+        binding.apply {
+            viewModel.getLanguage.observe(requireActivity()) { language ->
+                when (language) {
+                    Constants.ARSL -> {
+                        radioArsl.isChecked = true
+                    }
+                    Constants.ASL -> {
+                        radioAsl.isChecked = true
+                    }
                 }
             }
-    }
-
-    private fun handleSelectBtn() {
-        binding.btnSelect.setOnClickListener {
-
-
-            modelPath = languageModels[selectedLanguageCode]!!
-            selectedModel = selectedLanguageCode!!
-
-
-            findNavController().navigate(R.id.action_settingsFragment_to_lessonsFragment)
-
         }
     }
 

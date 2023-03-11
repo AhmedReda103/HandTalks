@@ -11,41 +11,31 @@
         android:layout_height="wrap_content"
         android:text="@string/sign_language"
         android:textStyle="bold"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_18ssp" />
+        android:textColor="@color/grey_600"
+        android:textSize="@dimen/_25ssp" />
 
     <RadioGroup
         android:id="@+id/select_lang_rg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
         android:orientation="vertical">
         <RadioButton android:id="@+id/radio_arsl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ARLS"
-            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/orange_500"
             />
 
         <RadioButton android:id="@+id/radio_asl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ASL"
-            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/orange_500"
            />
     </RadioGroup>
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/modeSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_28sdp"
-        android:text="@string/dark_mode"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_14ssp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgStatus" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
