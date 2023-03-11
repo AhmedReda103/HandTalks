@@ -2,6 +2,8 @@ package com.example.handtalks.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.handtalks.R
 import com.example.handtalks.databinding.IntroAppItemBinding
@@ -26,25 +28,25 @@ class AppIntroViewPager2Adapter : RecyclerView.Adapter<PagerVH2>() {
                 bindingDesign.introTitle.text = context.getString(R.string.intro_title_1)
                 bindingDesign.introDescription.text =
                     context.getString(R.string.intro_description_1)
-                bindingDesign.introImage.setImageResource(R.drawable.first_image)
+                bindingDesign.introImage.setImageResource(R.drawable.logo)
             }
             if (position == 1) {
                 bindingDesign.introTitle.text = context.getString(R.string.intro_title_2)
                 bindingDesign.introDescription.text =
                     context.getString(R.string.intro_description_2)
-                bindingDesign.introImage.setImageResource(R.drawable.second_image)
+                bindingDesign.introImage.setImageResource(R.drawable.learning)
             }
             if (position == 2) {
                 bindingDesign.introTitle.text = context.getString(R.string.intro_title_3)
                 bindingDesign.introDescription.text =
                     context.getString(R.string.intro_description_3)
-                bindingDesign.introImage.setImageResource(R.drawable.third_image)
+                bindingDesign.introImage.setImageResource(R.drawable.practice)
             }
             if (position == 3) {
                 bindingDesign.introTitle.text = context.getString(R.string.intro_title_4)
                 bindingDesign.introDescription.text =
                     context.getString(R.string.intro_description_4)
-                bindingDesign.introImage.setImageResource(R.drawable.forth_image)
+                bindingDesign.introImage.setImageResource(R.drawable.question)
             }
         }
     }

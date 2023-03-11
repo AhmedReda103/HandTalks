@@ -11,9 +11,12 @@
         android:id="@+id/intro_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:layout_weight="1"
-        android:padding="35dp"
+        android:paddingStart="@dimen/_35sdp"
+        android:paddingEnd="@dimen/_35sdp"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -21,8 +24,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textStyle="bold"
+        android:textSize="@dimen/_25sdp"
+        android:fontFamily="@font/poppins_thin"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         tools:text="@tools:sample/lorem" />
 
@@ -30,9 +35,14 @@
         android:id="@+id/intro_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/orange_500"
+        android:fontFamily="@font/sf_pro_display"
         tools:text="@tools:sample/lorem/random"
         android:maxLines="3"
         android:ellipsize="end" />

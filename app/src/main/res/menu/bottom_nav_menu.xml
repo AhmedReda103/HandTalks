@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/lessonsFragment"
         android:icon="@drawable/lessons"
@@ -8,7 +9,8 @@
     <item
         android:id="@+id/practiceFragment"
         android:icon="@drawable/egypt"
-        android:title="Practice" />
+        android:title="Practice"
+        />
 
     <item
         android:id="@+id/dictFragment"

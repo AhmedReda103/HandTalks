@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity() {
                 else -> binding.bottomNavigationView.isVisible = true
             }
         }
-
     }
 
     private fun customTheStatusBar() {

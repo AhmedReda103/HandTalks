@@ -101,8 +101,12 @@ class SettingsFragment : Fragment(R.layout.settings_fragment) {
 
     private fun handleSelectBtn() {
         binding.btnSelect.setOnClickListener {
+
+
             modelPath = languageModels[selectedLanguageCode]!!
             selectedModel = selectedLanguageCode!!
+
+
             findNavController().navigate(R.id.action_settingsFragment_to_lessonsFragment)
 
         }

@@ -21,6 +21,6 @@
         android:layout_marginStart="8dp"
         tools:text="ARSL"
         android:textSize="18sp"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
 </LinearLayout>

@@ -4,22 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/grey_550"
     android:padding="50dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Are you ready to learn?"
-        android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_thin"
+        android:textSize="25sp"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Choose Your Sign Language"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
     <Spinner
         android:id="@+id/language_spinner"
@@ -29,18 +31,23 @@
         android:prompt="@string/language_prompt"
         android:spinnerMode="dropdown" />
 
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSelect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:backgroundTint="#356DF1"
+        android:background="@drawable/shape_button_rounded"
         android:gravity="center"
-        android:text="@string/select"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="SELECT"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@android:color/white"
+        android:textSize="18sp"
         android:textStyle="bold"
+        app:backgroundTint="@null"
         app:cornerRadius="30dp" />
 
 

@@ -13,5 +13,12 @@
     <string name="intro_description_4">Test your knowledge after learning and practicing letters.</string>
     <string name="language_prompt">Select a Sign Language</string>
     <string name="select">select</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="choose_your_sign_language">Choose Your Sign Language</string>
+    <string name="are_you_ready_to_learn">Are you ready to learn?</string>
+    <string name="sign_language">Sign Language</string>
+    <string name="letter">letter</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
 
 </resources>
