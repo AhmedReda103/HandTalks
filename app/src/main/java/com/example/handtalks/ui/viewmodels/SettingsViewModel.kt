@@ -14,19 +14,13 @@ class SettingsViewModel @Inject constructor
     @IOThread
     private val dispatcher: CoroutineDispatcher,
     private val dataStoreManager: DataStoreManager
-) :
-    ViewModel() {
+) : ViewModel() {
 
 
     // private val dataStore = DataStoreManager(context)
 
-    val getTheme = dataStoreManager.getTheme().asLiveData(dispatcher)
-    @OptIn(DelicateCoroutinesApi::class)
-    fun setTheme(isDarkMode: Boolean) {
-        GlobalScope.launch(dispatcher) {
-            dataStoreManager.setTheme(isDarkMode)
+    init{
 
-        }
     }
 
     val isFirstTimeLaunch = dataStoreManager.isFirstTimeLaunch().asLiveData(dispatcher)
@@ -34,7 +28,6 @@ class SettingsViewModel @Inject constructor
     fun setFirstTimeLaunch(isFirstTimeLaunch: Boolean) {
         GlobalScope.launch(dispatcher) {
             dataStoreManager.setFirstTimeLaunch(isFirstTimeLaunch)
-
         }
     }
 
@@ -47,4 +40,7 @@ class SettingsViewModel @Inject constructor
             dataStoreManager.setLanguage(language)
         }
     }
+
+
+
 }

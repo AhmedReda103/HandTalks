@@ -44,7 +44,7 @@ class LessonsFragment : Fragment(R.layout.lessons_fragment), CardsInteractionCli
     override fun onItemClick(position: Int) {
         val action = LessonsFragmentDirections.actionLessonsFragmentToPracticeFragment(position)
         findNavController().navigate(action)
-        Toast.makeText(requireContext(), "${position}  item ", Toast.LENGTH_LONG).show()
+        //Toast.makeText(requireContext(), "${position}  item ", Toast.LENGTH_LONG).show()
     }
 
 }

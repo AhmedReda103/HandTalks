@@ -21,6 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:paddingBottom="@dimen/_10sdp"
             android:background="@drawable/nav_header_main_background"
             >
             <TextView
@@ -48,12 +49,7 @@
                 />
 
 
-
-
         </LinearLayout>
-
-
-
 
     </androidx.cardview.widget.CardView>
 

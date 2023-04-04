@@ -7,6 +7,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.handtalks.R
@@ -15,6 +16,7 @@ import com.example.handtalks.other.languageCodes
 import com.example.handtalks.other.languageModels
 import com.example.handtalks.other.modelPath
 import com.example.handtalks.other.selectedModel
+import com.example.handtalks.ui.viewmodels.SettingsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -23,7 +25,7 @@ class ChooseLangFragment : Fragment(R.layout.choose_lang_fragment) {
 
     private lateinit var binding: ChooseLangFragmentBinding
     var selectedLanguageCode: String? = null
-
+    private val settingViewModel  by viewModels<SettingsViewModel>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = ChooseLangFragmentBinding.bind(view)
@@ -37,6 +39,8 @@ class ChooseLangFragment : Fragment(R.layout.choose_lang_fragment) {
         binding.btnSelect.setOnClickListener {
             modelPath = languageModels[selectedLanguageCode]!!
             selectedModel = selectedLanguageCode!!
+            settingViewModel.setLanguage(selectedModel)
+            settingViewModel.setFirstTimeLaunch(true)
             navigateToLessonsFragment()
         }
     }
