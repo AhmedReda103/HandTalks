@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_25sdp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/sign_language"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_20ssp" />
+
+    <RadioGroup
+        android:id="@+id/select_lang_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_arsl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ARLS"
+            android:fontFamily="@font/raleway_semi_bold"
+            android:textColor="@color/orange_500"
+            android:textSize="@dimen/_16sdp" />
+
+        <RadioButton
+            android:id="@+id/radio_asl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ASL"
+            android:fontFamily="@font/raleway_semi_bold"
+            android:textColor="@color/orange_500"
+            android:textSize="@dimen/_16sdp" />
+    </RadioGroup>
+</androidx.appcompat.widget.LinearLayoutCompat>

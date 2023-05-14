@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">HandTalks</string>
+    <string name="intro_next">Next</string>
+    <string name="intro_skip">Skip</string>
+    <string name="intro_get_started">Get Started</string>
+    <string name="intro_title_1">SIGN LANGUAGE</string>
+    <string name="intro_title_2">Learning Alphabets</string>
+    <string name="intro_title_3">Practice</string>
+    <string name="intro_title_4">Quiz</string>
+    <string name="intro_description_1">Explore more by swiping left!</string>
+    <string name="intro_description_2">using hand to represent a letters in languages.</string>
+    <string name="intro_description_3">Develop your skills after learning the alphabets.</string>
+    <string name="intro_description_4">Test your knowledge after learning and practicing letters.</string>
+    <string name="language_prompt">Select a Sign Language</string>
+    <string name="select">select</string>
+
+</resources>
