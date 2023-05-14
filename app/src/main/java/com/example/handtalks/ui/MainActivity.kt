@@ -16,32 +16,33 @@ import com.example.handtalks.other.languageModels
 import com.example.handtalks.other.modelPath
 import com.example.handtalks.ui.viewmodels.SettingsViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import timber.log.Timber
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
-    private val settingViewModel by viewModels<SettingsViewModel>()
-        //  private var isFirstTimeLaunchVar: Boolean? = false
-
+    private val settingViewModel: SettingsViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen()
+
+
         binding = ActivityMainBinding.inflate(layoutInflater, null, false)
         setContentView(binding.root)
-
         //customTheStatusBar()
+
         navController = findNavController(R.id.navHostFragment)
         binding.bottomNavigationView.setupWithNavController(navController)
+
         binding.bottomNavigationView.setOnItemReselectedListener {
+
         }
+
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
             when (destination.id) {
-                R.id.appIntro, R.id.chooseLangFragment, R.id.practiceFragment
-                ->
+                R.id.appIntro, R.id.chooseLangFragment, R.id.practiceFragment ->
                     binding.bottomNavigationView.isVisible = false
 
                 else -> binding.bottomNavigationView.isVisible = true

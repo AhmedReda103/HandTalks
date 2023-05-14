@@ -69,4 +69,5 @@
         android:textStyle="bold"
         app:cornerRadius="@dimen/_8sdp" />
 
+
 </androidx.appcompat.widget.LinearLayoutCompat>

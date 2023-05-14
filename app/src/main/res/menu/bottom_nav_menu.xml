@@ -6,7 +6,7 @@
         android:icon="@drawable/lessons"
         android:title="Lessons" />
 
-    <item
+<item
         android:id="@+id/dictFragment"
         android:icon="@drawable/dictionary"
         android:title="Dictionary" />

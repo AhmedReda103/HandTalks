@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:background="@color/grey_550"
     android:padding="@dimen/_35sdp">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,6 +23,7 @@
         android:fontFamily="@font/raleway_medium"
         android:textSize="@dimen/_14ssp" />
 
+
     <Spinner
         android:id="@+id/language_spinner"
         android:layout_width="match_parent"
@@ -32,8 +32,6 @@
         android:prompt="@string/language_prompt"
         android:spinnerMode="dropdown"
         />
-
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSelect"
         android:layout_width="match_parent"
@@ -52,6 +50,8 @@
         android:textStyle="bold"
         app:backgroundTint="@null"
         app:cornerRadius="@dimen/_25sdp" />
+
+
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
