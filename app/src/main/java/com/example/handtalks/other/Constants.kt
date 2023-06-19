@@ -26,13 +26,12 @@ object Constants {
 
     fun getARSLItems(): List<AlphapetsItem> {
         val list = mutableListOf<AlphapetsItem>()
-        val firstItem = AlphapetsItem(" الحروف من الألف الي الذال ", " تسع حروف ")
+        val firstItem = AlphapetsItem("الحروف من الألف الى الذال ", "تسع حروف")
         list.add(firstItem)
-        val secondItem = AlphapetsItem("الحروف من الراء الي الغين ", "عشر حروف ")
+        val secondItem = AlphapetsItem("الحروف من الراء الى الغين ", "عشر حروف")
         list.add(secondItem)
-        val thirdItem = AlphapetsItem("الحروف من الفاء الي الياء  ", " تسع حروف ")
+        val thirdItem = AlphapetsItem(" الحروف من الفاء الى الياء ", "تسع حروف")
         list.add(thirdItem)
-
         return list
     }
 

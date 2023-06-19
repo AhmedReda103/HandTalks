@@ -2,7 +2,7 @@ package com.example.handtalks.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import com.example.handtalks.DataStoreManager
+import com.example.handtalks.data.local.DataStoreManager
 import com.example.handtalks.qualifiers.IOThread
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*

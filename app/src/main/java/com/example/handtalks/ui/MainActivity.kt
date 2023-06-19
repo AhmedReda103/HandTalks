@@ -1,10 +1,8 @@
 package com.example.handtalks.ui
 
 import android.os.Bundle
-import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.isVisible
 import androidx.navigation.NavController
@@ -24,10 +22,10 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
-    private val settingViewModel  by viewModels<SettingsViewModel>()
+    private val settingViewModel: SettingsViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState )
+        super.onCreate(savedInstanceState)
         installSplashScreen()
 
 
@@ -44,8 +42,9 @@ class MainActivity : AppCompatActivity() {
 
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
             when (destination.id) {
-                R.id.appIntro, R.id.chooseLangFragment ->
+                R.id.appIntro, R.id.chooseLangFragment, R.id.practiceFragment ->
                     binding.bottomNavigationView.isVisible = false
+
                 else -> binding.bottomNavigationView.isVisible = true
             }
         }
@@ -54,12 +53,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun checkLanguage()  {
+    private fun checkLanguage() {
         settingViewModel.getLanguage.observe(this) { lang ->
             when (lang) {
                 ASL -> {
                     modelPath = languageModels[ASL].toString()
                 }
+
                 ARSL -> {
                     modelPath = languageModels[ARSL].toString()
                 }
@@ -71,7 +71,6 @@ class MainActivity : AppCompatActivity() {
 //        window.statusBarColor = ContextCompat.getColor(this, R.color.white)
 //        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
 //    }
-
 
 
 }

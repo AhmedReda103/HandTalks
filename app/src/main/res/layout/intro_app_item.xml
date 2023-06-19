@@ -42,7 +42,7 @@
         android:textAlignment="center"
         android:textSize="@dimen/_16sdp"
         android:textColor="@color/orange_500"
-        android:fontFamily="@font/sf_pro_display"
+        android:fontFamily="@font/raleway_medium"
         tools:text="@tools:sample/lorem/random"
         android:maxLines="3"
         android:ellipsize="end" />

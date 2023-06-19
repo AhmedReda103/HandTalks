@@ -3,7 +3,7 @@ package com.example.handtalks.di
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.annotation.MainThread
-import com.example.handtalks.DataStoreManager
+import com.example.handtalks.data.local.DataStoreManager
 import com.example.handtalks.qualifiers.IOThread
 import com.example.handtalks.other.*
 import com.example.handtalks.other.Constants.SHARED_PREFERENCES_NAME

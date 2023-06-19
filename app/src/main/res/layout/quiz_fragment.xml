@@ -21,11 +21,10 @@
             app:layout_constraintVertical_bias="0.5"
             android:visibility="visible"
             tools:text="A"
-            android:textSize="100sp"
+            android:textSize="@dimen/_70ssp"
             android:textColor="@color/grey_600"
-            android:fontFamily="@font/poppins_thin"
+            android:fontFamily="@font/raleway_extra_bold"
             />
-
 
 
 

@@ -8,6 +8,7 @@
     app:cardElevation="@dimen/_5sdp"
     app:cardUseCompatPadding="true"
     card_view:cardCornerRAdius="@dimen/_5sdp"
+    android:backgroundTint="@color/orange_500"
     >
 
         <TextView
@@ -18,7 +19,8 @@
             android:gravity="center"
             android:textAllCaps="false"
             android:padding="@dimen/_8sdp"
-            android:textColor="@color/black"
+            android:textColor="@color/grey_600"
+            android:fontFamily="@font/raleway_semi_bold"
             android:textSize="@dimen/_18ssp" />
 
 </androidx.cardview.widget.CardView>

@@ -1,4 +1,4 @@
-package com.example.handtalks
+package com.example.handtalks.app
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

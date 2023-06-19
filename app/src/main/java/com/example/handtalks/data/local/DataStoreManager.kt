@@ -1,4 +1,4 @@
-package com.example.handtalks
+package com.example.handtalks.data.local
 
 import android.content.Context
 import androidx.datastore.core.DataStore

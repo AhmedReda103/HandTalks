@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HandTalks</string>
+    <string name="intro_next">التالى</string>
+    <string name="intro_skip">تخطى</string>
+    <string name="intro_get_started">بدء</string>
+    <string name="intro_title_1">هاند توكس</string>
+    <string name="intro_title_2">تعلم الحروف</string>
+    <string name="intro_title_3">ممارسة</string>
+    <string name="intro_title_4">اختبار</string>
+    <string name="intro_description_1">استكشف المزيد عن طريق التمرير لليمين</string>
+    <string name="intro_description_2">استخدام اليد لتمثيل الحرف فى اللغه</string>
+    <string name="intro_description_3">طور مهارتك بعد تعلم الحروف.</string>
+    <string name="intro_description_4">اختبر معرفتك بعد تعلم الحروف والممارسه </string>
+    <string name="language_prompt">اختر لغة الاشارة</string>
+    <string name="select">اختر</string>
+    <string name="dark_mode">الوضع الداكن</string>
+    <string name="choose_your_sign_language">اختر لغة الاشارة الخاصه بك</string>
+    <string name="are_you_ready_to_learn">هل انت جاهز للتعلم؟</string>
+    <string name="sign_language">لغة الاشاره</string>
+    <string name="letter">الحرف</string>
+    <string name="letters">الحروف</string>
+
+</resources>

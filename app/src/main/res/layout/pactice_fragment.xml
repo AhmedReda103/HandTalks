@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/check_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
         android:adjustViewBounds="true"
         app:layout_constraintBottom_toTopOf="@+id/viewFinder"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,8 +30,8 @@
         android:id="@+id/viewPagerImageSlider"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:paddingStart="70dp"
-        android:paddingEnd="70dp"
+        android:paddingStart="@dimen/_60sdp"
+        android:paddingEnd="@dimen/_60sdp"
         app:layout_constraintBottom_toTopOf="@+id/viewFinder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
